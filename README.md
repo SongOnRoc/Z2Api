@@ -78,6 +78,48 @@
 
 ### Docker部署
 
+#### 使用GitHub Container Registry (推荐)
+
+我们已配置GitHub Actions自动构建Docker镜像并推送到GitHub Container Registry (GHCR)。
+
+1. **拉取预构建镜像**
+   ```bash
+   # 拉取最新版本
+   docker pull ghcr.io/yourusername/z2api:latest
+   
+   # 拉取特定版本
+   docker pull ghcr.io/yourusername/z2api:v1.0.0
+   ```
+
+2. **运行容器**
+   ```bash
+   docker run -p 9090:9090 \
+     -e ZAI_TOKEN=your_z_ai_token \
+     -e DEFAULT_KEY=your_api_key \
+     ghcr.io/yourusername/z2api:latest
+   ```
+
+#### 使用Docker Compose (推荐)
+
+1. **克隆仓库**
+   ```bash
+   git clone https://github.com/yourusername/ZtoApi.git
+   cd ZtoApi
+   ```
+
+2. **配置环境变量**
+   ```bash
+   cp .env.example .env
+   # 编辑 .env 文件，设置你的配置
+   ```
+
+3. **启动服务**
+   ```bash
+   docker-compose up -d
+   ```
+
+#### 本地构建
+
 1. **构建镜像**
    ```bash
    docker build -t zto-api .
