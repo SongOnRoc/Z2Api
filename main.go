@@ -76,7 +76,7 @@ const ANON_TOKEN_ENABLED = true
 // 从环境变量初始化配置
 func initConfig() {
 	UPSTREAM_URL = getEnv("UPSTREAM_URL", "https://chat.z.ai/api/chat/completions")
-	DEFAULT_KEY = getEnv("DEFAULT_KEY", "sk-your-key")
+	DEFAULT_KEY = getEnv("DEFAULT_KEY", "sk-123456")
 	ZAI_TOKEN = getEnv("ZAI_TOKEN", "")
 	MODEL_NAME = getEnv("MODEL_NAME", "GLM-4.5")
 	PORT = getEnv("PORT", "9090")

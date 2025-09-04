@@ -91,7 +91,7 @@ docker-compose up -d
 | 环境变量 | 默认值 | 描述 |
 |---------|--------|------|
 | `UPSTREAM_URL` | `https://chat.z.ai/api/chat/completions` | 上游API地址 |
-| `DEFAULT_KEY` | `sk-your-key` | 默认API密钥 |
+| `DEFAULT_KEY` | `sk-123456` | 默认API密钥 |
 | `ZAI_TOKEN` | `""` | Z.ai认证令牌 |
 | `MODEL_NAME` | `GLM-4.5` | 模型名称 |
 | `PORT` | `9090` | 服务端口 |

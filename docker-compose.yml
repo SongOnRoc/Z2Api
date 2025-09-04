@@ -1,13 +1,13 @@
-version: '3.8'
+version: "3.8"
 
 services:
   z2api:
-    image: ghcr.io/${GITHUB_REPOSITORY:-yourusername/z2api}:latest
+    image: ghcr.io/songonroc/z2api:latest
     container_name: z2api
     ports:
       - "${PORT:-9090}:9090"
     environment:
-      - DEFAULT_KEY=${DEFAULT_KEY:-sk-your-key}
+      - DEFAULT_KEY=${DEFAULT_KEY:-sk-123456}
       - ZAI_TOKEN=${ZAI_TOKEN}
       - MODEL_NAME=${MODEL_NAME:-GLM-4.5}
       - PORT=${PORT:-9090}
@@ -16,7 +16,15 @@ services:
       - DASHBOARD_ENABLED=${DASHBOARD_ENABLED:-true}
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:9090/docs"]
+      test:
+        [
+          "CMD",
+          "wget",
+          "--no-verbose",
+          "--tries=1",
+          "--spider",
+          "http://localhost:9090/docs",
+        ]
       interval: 30s
       timeout: 10s
       retries: 3

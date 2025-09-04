@@ -142,7 +142,7 @@
    - 选择Docker作为环境
    - 设置以下环境变量：
    - `ZAI_TOKEN`: Z.ai 的访问令牌 (可选，不提供将使用匿名token)
-   - `DEFAULT_KEY`: 客户端API密钥 (可选，默认: sk-your-key)
+   - `DEFAULT_KEY`: 客户端API密钥 (可选，默认: sk-123456)
    - `MODEL_NAME`: 显示的模型名称 (可选，默认: GLM-4.5)
    - `PORT`: 服务监听端口 (Render会自动设置)
 
@@ -210,7 +210,7 @@ docker run -p 9090:9090 \
 
 | 变量名 | 说明 | 默认值 | 示例 |
 |--------|------|--------|------|
-| `DEFAULT_KEY` | 客户端API密钥 | `sk-your-key` | `sk-my-api-key` |
+| `DEFAULT_KEY` | 客户端API密钥 | `sk-123456` | `sk-my-api-key` |
 | `MODEL_NAME` | 显示模型名称 | `GLM-4.5` | `GLM-4.5-Pro` |
 | `PORT` | 服务监听端口 | `9090` | `9000` |
 | `DEBUG_MODE` | 调试模式开关 | `true` | `false` |

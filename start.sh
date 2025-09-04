@@ -26,7 +26,7 @@ if [ -n "$ENV_FILE" ]; then
     export $(grep -v '^#' $ENV_FILE | xargs)
     
     # 显示关键配置
-    echo "🔑 API Key: ${DEFAULT_KEY:-sk-your-key}"
+    echo "🔑 API Key: ${DEFAULT_KEY:-sk-123456}"
     echo "🤖 模型名称: ${MODEL_NAME:-GLM-4.5}"
     echo "🌐 端口: ${PORT:-9090}"
     echo "🐛 调试模式: ${DEBUG_MODE:-true}"
